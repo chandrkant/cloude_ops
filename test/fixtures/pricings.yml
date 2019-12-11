@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sku: MyString
+  rate_code: MyString
+  description: MyString
+  begin_range: 
+  unit: MyString
+  price_per_unit: 1.5
+  effective_date: 2019-12-11 06:29:52
+  location: MyString
+  servicename: MyString
+
+two:
+  sku: MyString
+  rate_code: MyString
+  description: MyString
+  begin_range: 
+  unit: MyString
+  price_per_unit: 1.5
+  effective_date: 2019-12-11 06:29:52
+  location: MyString
+  servicename: MyString
