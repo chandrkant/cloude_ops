@@ -18,7 +18,8 @@ gem 'puma', '~> 4.1'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-
+gem 'redis'
+gem 'redis-namespace'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
@@ -37,5 +38,9 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 gem 'rest-client'
+#sidekiq gems
+gem 'sidekiq'
+gem 'sidekiq-scheduler'
+# sidekiq gems ends
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

@@ -12,18 +12,19 @@
 
 ActiveRecord::Schema.define(version: 2019_12_11_005951) do
 
-  create_table "pricings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+  create_table "pricings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "sku"
     t.string "rate_code"
     t.string "description"
     t.integer "begin_range"
+    t.integer "end_range"
     t.string "unit"
     t.float "price_per_unit"
     t.datetime "effective_date"
     t.string "location"
     t.string "servicename"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", precision: 6, default: "2019-12-11 12:14:53", null: false
+    t.datetime "updated_at", precision: 6, default: "2019-12-11 12:14:53", null: false
     t.index ["effective_date"], name: "index_pricings_on_effective_date"
     t.index ["location"], name: "index_pricings_on_location"
     t.index ["rate_code"], name: "index_pricings_on_rate_code"

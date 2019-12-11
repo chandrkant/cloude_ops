@@ -5,13 +5,14 @@ class CreatePricings < ActiveRecord::Migration[6.0]
       t.string :rate_code
       t.string :description
       t.integer :begin_range
+      t.integer :end_range
       t.string :unit
       t.float :price_per_unit
       t.datetime :effective_date
       t.string :location
       t.string :servicename
 
-      t.timestamps
+      t.timestamps default: Time.now
     end
     add_index :pricings, :sku
     add_index :pricings, :rate_code

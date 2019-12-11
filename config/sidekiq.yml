@@ -1,0 +1,14 @@
+# config/sidekiq.yml
+:verbose: false
+:concurrency: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+:timeout: 30
+production:
+  :concurrency: 5
+:queues:
+  - [price, 3]
+
+:schedule:
+  UpdatePriceJob:
+    cron: '0 0 * * *'
+    queue: price
+    enabled: true
